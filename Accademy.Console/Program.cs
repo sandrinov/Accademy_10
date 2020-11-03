@@ -11,7 +11,7 @@ using System.Text;
 namespace Accademy.Console
 {
     /// <summary>
-    /// 
+    ///      
     /// </summary>
     class Program
     {

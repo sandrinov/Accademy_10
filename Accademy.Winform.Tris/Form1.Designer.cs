@@ -1,4 +1,6 @@
-﻿namespace Accademy.Winform.Tris
+﻿using System.Windows.Forms;
+
+namespace Accademy.Winform.Tris
 {
     partial class Form1
     {
@@ -49,6 +51,8 @@
             this.txt_00.Size = new System.Drawing.Size(47, 45);
             this.txt_00.TabIndex = 0;
             this.txt_00.TextChanged += new System.EventHandler(this.txt_00_TextChanged);
+            this.txt_00.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_00_KeyDown);
+            this.txt_00.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_00_KeyPress);
             // 
             // txt_01
             // 

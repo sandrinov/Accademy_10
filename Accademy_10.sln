@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.GeometryAbstract",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Helper", "Accademy.Helper\Accademy.Helper.csproj", "{BD55CB96-6391-4061-843B-88109E1C819A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.WinForms", "Accademy.WinForms\Accademy.WinForms.csproj", "{8ADD042E-779F-4691-AEFC-4D66E4CC5B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Winform.Tris", "Accademy.Winform.Tris\Accademy.Winform.Tris.csproj", "{E56A9A68-E815-4CD0-A4B3-5D3EFAA4BCB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{BD55CB96-6391-4061-843B-88109E1C819A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD55CB96-6391-4061-843B-88109E1C819A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD55CB96-6391-4061-843B-88109E1C819A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ADD042E-779F-4691-AEFC-4D66E4CC5B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ADD042E-779F-4691-AEFC-4D66E4CC5B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ADD042E-779F-4691-AEFC-4D66E4CC5B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ADD042E-779F-4691-AEFC-4D66E4CC5B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56A9A68-E815-4CD0-A4B3-5D3EFAA4BCB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56A9A68-E815-4CD0-A4B3-5D3EFAA4BCB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56A9A68-E815-4CD0-A4B3-5D3EFAA4BCB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56A9A68-E815-4CD0-A4B3-5D3EFAA4BCB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

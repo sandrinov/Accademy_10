@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.ManageGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Row0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Row1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Row2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Moves.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

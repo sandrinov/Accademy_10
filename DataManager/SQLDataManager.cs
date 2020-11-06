@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Accademy.Entities;
+using DataManager;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,6 +11,11 @@ namespace Accademy.DataManager
 {
     public class SQLDataManager : IDataManager
     {
+        public DataOperationResult CreateNewCliente(Cliente newCliente)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool LoginIsOK(string username, string password)
         {
             throw new NotImplementedException();

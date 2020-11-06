@@ -42,6 +42,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_CF = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -145,7 +146,7 @@
             this.txt_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nome.Location = new System.Drawing.Point(303, 257);
             this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(328, 45);
+            this.txt_Nome.Size = new System.Drawing.Size(516, 45);
             this.txt_Nome.TabIndex = 10;
             // 
             // txt_Cognome
@@ -153,7 +154,7 @@
             this.txt_Cognome.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Cognome.Location = new System.Drawing.Point(303, 308);
             this.txt_Cognome.Name = "txt_Cognome";
-            this.txt_Cognome.Size = new System.Drawing.Size(328, 45);
+            this.txt_Cognome.Size = new System.Drawing.Size(516, 45);
             this.txt_Cognome.TabIndex = 12;
             // 
             // label7
@@ -171,7 +172,7 @@
             this.txt_CF.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CF.Location = new System.Drawing.Point(303, 359);
             this.txt_CF.Name = "txt_CF";
-            this.txt_CF.Size = new System.Drawing.Size(328, 45);
+            this.txt_CF.Size = new System.Drawing.Size(516, 45);
             this.txt_CF.TabIndex = 14;
             // 
             // label8
@@ -184,11 +185,22 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Cod. Fisc";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(303, 434);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 20);
+            this.label9.TabIndex = 15;
+            // 
             // OpenCCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 575);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_CF);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_Cognome);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_CF;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

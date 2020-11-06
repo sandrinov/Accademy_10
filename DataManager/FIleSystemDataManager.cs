@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Accademy.Entities;
+using DataManager;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +24,41 @@ namespace Accademy.DataManager
             ccFileName = System.IO.Path.Combine(bankDir, "ContiCorrenti.txt");
             movimentiFileName = System.IO.Path.Combine(bankDir, "Movimenti.txt");
         }
+
+        public DataOperationResult CreateNewCliente(Cliente newCliente)
+        {
+            DataOperationResult result = new DataOperationResult();
+            // Write a row in Clienti.txt
+            try
+            {
+                using (System.IO.StreamWriter sw_clienti = File.AppendText(clientiFileName))
+                {
+                    
+                    string s_new_cliente = newCliente.Username + ";" +
+                                         newCliente.FirstName + ";" +
+                                         newCliente.LastName + ";" +
+                                         newCliente.CF;
+                    sw_clienti.WriteLine(s_new_cliente);
+                    sw_clienti.Close(); 
+                }
+
+                System.IO.StreamWriter sw_cc = File.AppendText(ccFileName);
+                ContoCorrente new_cc = newCliente.mioConto;
+                string s_new_cc = new_cc.GetNumeroConto() + ";" + new_cc.GetSaldo() + ";" + newCliente.Username;
+                sw_cc.WriteLine(s_new_cc);
+                sw_cc.Close();
+                result.IsOK = true;
+            }
+            catch (Exception excp)
+            {
+                result.IsOK = false;
+                result.Message = excp.Message;
+            }
+
+           
+            return result;
+        }
+
         public bool LoginIsOK(string username, string password)
         {
 
@@ -53,16 +91,19 @@ namespace Accademy.DataManager
             string line;
             char[] chararray = new char[1]; // se scrivessi char[] ca starei dichiarando un puntatore vuoto
             chararray[0] = ';';
-            System.IO.StreamReader file = new System.IO.StreamReader(ccFileName);
-            while ((line = file.ReadLine()) != null) // quella tra paresntesi si chiama guardia ed e' un espressione booleana
+            using (System.IO.StreamReader file = new System.IO.StreamReader(ccFileName))
             {
-                String[] resultArray = line.Split(chararray);
-                string current_user = resultArray[0];               
-                if (username == current_user)
+                while ((line = file.ReadLine()) != null) // quella tra paresntesi si chiama guardia ed e' un espressione booleana
                 {
-                    result = true;
-                    break;
+                    String[] resultArray = line.Split(chararray);
+                    string current_user = resultArray[0];
+                    if (username == current_user)
+                    {
+                        result = true;
+                        break;
+                    }
                 }
+                file.Close(); 
             }
             return result;
         }

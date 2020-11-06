@@ -1,5 +1,6 @@
 ﻿using Accademy.DataManager;
 using Accademy.Entities;
+using DataManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,7 +63,15 @@ namespace Accademy.Bank
                 mioConto = newCC
             };
 
-            datamanager.CreateNewCliente();
+            DataOperationResult result = datamanager.CreateNewCliente(newCliente);
+            if (result.IsOK)
+            {
+
+            }
+            else
+            {
+                this.label9.Text = result.Message;
+            }
 
         }
     }

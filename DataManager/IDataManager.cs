@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Accademy.Entities;
+using DataManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,6 @@ namespace Accademy.DataManager
     {
         bool LoginIsOK(string username, string password);
         bool UserIsAnOwner(string username);
-        void CreateNewCliente();
+        DataOperationResult CreateNewCliente(Cliente newCliente);
     }
 }

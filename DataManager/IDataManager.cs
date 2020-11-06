@@ -9,5 +9,6 @@ namespace Accademy.DataManager
     public interface IDataManager
     {
         bool LoginIsOK(string username, string password);
+        bool UserIsAnOwner(string username);
     }
 }

@@ -27,28 +27,25 @@ namespace Accademy.Bank
 
             if (datamanager.LoginIsOK(username, password))
             {
-                OpenCCForm openform = new OpenCCForm();
-                openform.Tag = this;
-                openform.Show();
-                this.Hide();
+                if (datamanager.UserIsAnOwner(username))
+                {
+                    ManageCCForm manageform = new ManageCCForm();
+                    manageform.Tag = this;
+                    manageform.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    OpenCCForm openform = new OpenCCForm();
+                    openform.Tag = this;
+                    openform.Show();
+                    this.Hide();
+                }              
             }
             else
             {
                 this.lbl_loginerror.Text = "Invalid Credentials!";
             }
-
-
-            //if (this.txt_username.Text == "A")
-            //{
-                
-            //}
-            //else
-            //{
-            //    ManageCCForm manageform = new ManageCCForm();
-            //    manageform.Tag = this;
-            //    manageform.Show();
-            //    this.Hide();
-            //}
         }
     }
 }

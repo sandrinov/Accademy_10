@@ -17,13 +17,6 @@ namespace Accademy.Bank
             InitializeComponent();
         }
 
-        private void btn_manageCC_Click(object sender, EventArgs e)
-        {
-            ManageCCForm manageform = new ManageCCForm();
-            manageform.Show();
-            this.Close();
-        }
-
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();

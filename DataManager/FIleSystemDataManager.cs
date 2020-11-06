@@ -51,7 +51,7 @@ namespace Accademy.DataManager
             string line;
             char[] chararray = new char[1]; // se scrivessi char[] ca starei dichiarando un puntatore vuoto
             chararray[0] = ';';
-            System.IO.StreamReader file = new System.IO.StreamReader(usersFileName);
+            System.IO.StreamReader file = new System.IO.StreamReader(ccFileName);
             while ((line = file.ReadLine()) != null) // quella tra paresntesi si chiama guardia ed e' un espressione booleana
             {
                 String[] resultArray = line.Split(chararray);

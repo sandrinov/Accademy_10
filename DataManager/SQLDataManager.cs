@@ -13,5 +13,10 @@ namespace Accademy.DataManager
         {
             throw new NotImplementedException();
         }
+
+        public bool UserIsAnOwner(string username)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -36,6 +36,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_Conferma = new System.Windows.Forms.Button();
             this.btn_Annulla = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_Nome = new System.Windows.Forms.TextBox();
+            this.txt_Cognome = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_CF = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +58,7 @@
             // btn_close
             // 
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(876, 302);
+            this.btn_close.Location = new System.Drawing.Point(876, 504);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(123, 48);
             this.btn_close.TabIndex = 2;
@@ -105,7 +111,7 @@
             // btn_Conferma
             // 
             this.btn_Conferma.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Conferma.Location = new System.Drawing.Point(20, 285);
+            this.btn_Conferma.Location = new System.Drawing.Point(20, 487);
             this.btn_Conferma.Name = "btn_Conferma";
             this.btn_Conferma.Size = new System.Drawing.Size(211, 51);
             this.btn_Conferma.TabIndex = 7;
@@ -115,18 +121,79 @@
             // btn_Annulla
             // 
             this.btn_Annulla.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Annulla.Location = new System.Drawing.Point(303, 285);
+            this.btn_Annulla.Location = new System.Drawing.Point(303, 487);
             this.btn_Annulla.Name = "btn_Annulla";
             this.btn_Annulla.Size = new System.Drawing.Size(211, 51);
             this.btn_Annulla.TabIndex = 8;
             this.btn_Annulla.Text = "Annulla";
             this.btn_Annulla.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 39);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Nome";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txt_Nome
+            // 
+            this.txt_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nome.Location = new System.Drawing.Point(303, 257);
+            this.txt_Nome.Name = "txt_Nome";
+            this.txt_Nome.Size = new System.Drawing.Size(328, 45);
+            this.txt_Nome.TabIndex = 10;
+            // 
+            // txt_Cognome
+            // 
+            this.txt_Cognome.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cognome.Location = new System.Drawing.Point(303, 308);
+            this.txt_Cognome.Name = "txt_Cognome";
+            this.txt_Cognome.Size = new System.Drawing.Size(328, 45);
+            this.txt_Cognome.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 314);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 39);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Cognome";
+            // 
+            // txt_CF
+            // 
+            this.txt_CF.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CF.Location = new System.Drawing.Point(303, 359);
+            this.txt_CF.Name = "txt_CF";
+            this.txt_CF.Size = new System.Drawing.Size(328, 45);
+            this.txt_CF.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(13, 365);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 39);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Cod. Fisc";
+            // 
             // OpenCCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 362);
+            this.ClientSize = new System.Drawing.Size(1011, 575);
+            this.Controls.Add(this.txt_CF);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txt_Cognome);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_Nome);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_Annulla);
             this.Controls.Add(this.btn_Conferma);
             this.Controls.Add(this.label5);
@@ -152,5 +219,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_Conferma;
         private System.Windows.Forms.Button btn_Annulla;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_Nome;
+        private System.Windows.Forms.TextBox txt_Cognome;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_CF;
+        private System.Windows.Forms.Label label8;
     }
 }

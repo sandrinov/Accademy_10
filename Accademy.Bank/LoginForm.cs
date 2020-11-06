@@ -36,7 +36,11 @@ namespace Accademy.Bank
                 }
                 else
                 {
-                    OpenCCForm openform = new OpenCCForm();
+                    //OpenCCForm openform = new OpenCCForm();
+                    //openform.CurrentUser = username;
+
+                    OpenCCForm openform = new OpenCCForm(username);
+
                     openform.Tag = this;
                     openform.Show();
                     this.Hide();

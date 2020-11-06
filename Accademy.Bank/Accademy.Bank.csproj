@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Accademy.Helper\Accademy.Helper.csproj">
+      <Project>{bd55cb96-6391-4061-843b-88109e1c819a}</Project>
+      <Name>Accademy.Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataManager\DataManager.csproj">
       <Project>{a2c9af10-bf90-417e-b30e-efeac9d46795}</Project>
       <Name>DataManager</Name>

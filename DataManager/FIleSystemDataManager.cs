@@ -10,12 +10,14 @@ namespace Accademy.DataManager
     {
         private string bankDir = @"D:\temp\BankDB";
         private string usersFileName;
+        private string clientiFileName;
         private string ccFileName;
         private string movimentiFileName;
 
         public FIleSystemDataManager()
         {
             usersFileName = System.IO.Path.Combine(bankDir, "Users.txt");
+            clientiFileName = System.IO.Path.Combine(bankDir, "Clienti.txt");
             ccFileName = System.IO.Path.Combine(bankDir, "ContiCorrenti.txt");
             movimentiFileName = System.IO.Path.Combine(bankDir, "Movimenti.txt");
         }

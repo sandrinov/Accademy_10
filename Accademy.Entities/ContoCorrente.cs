@@ -11,8 +11,11 @@ namespace Accademy.Entities
         private string numeroConto;
         private double saldo;
         private Cliente owner;
+
+        public List<Movimento> Movimenti { get; }
         public ContoCorrente(Cliente owner)
         {
+            Movimenti = new List<Movimento>();
             this.owner = owner;
         }
 
@@ -37,6 +40,20 @@ namespace Accademy.Entities
         public OperationResult Deposita(double cifra)
         {
             saldo += cifra;
+            Movimento deposito = new Movimento()
+            {
+                Tipo = TipoMovimento.Deposito,
+                Importo = cifra,
+                Data = DateTime.Now
+            };
+
+            //Movimento deposito = new Movimento();
+            //deposito.Tipo = TipoMovimento.Deposito;
+            //deposito.Importo = cifra;
+            //deposito.Data = DateTime.Now;
+
+            Movimenti.Add(deposito);
+
             return OperationResult.Operazione_OK;
         }
         public OperationResult Preleva(double cifra)
@@ -45,6 +62,13 @@ namespace Accademy.Entities
             if (saldo >= cifra)
             {
                 saldo -= cifra;
+
+                Movimenti.Add(new Movimento() {
+                    Tipo = TipoMovimento.Prelievo,
+                    Importo = cifra,
+                    Data = DateTime.Now
+                });
+
                 result = OperationResult.Operazione_OK;
             }
             return result;
@@ -52,6 +76,13 @@ namespace Accademy.Entities
 
         public OperationResult Bonifico(double cifra, ContoCorrente beneficiario)
         {
+            Movimenti.Add(new Movimento()
+            {
+                Tipo = TipoMovimento.Bonifico,
+                Importo = cifra,
+                Data = DateTime.Now,
+                Beneficiario = beneficiario.GetNumeroConto()
+            });
             return OperationResult.Operazione_OK;
         }
     }

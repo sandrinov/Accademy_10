@@ -27,12 +27,6 @@ namespace Accademy.Bank
 
             if (datamanager.LoginIsOK(username, password))
             {
-
-            }
-
-
-            if (this.txt_username.Text == "A")
-            {
                 OpenCCForm openform = new OpenCCForm();
                 openform.Tag = this;
                 openform.Show();
@@ -40,11 +34,21 @@ namespace Accademy.Bank
             }
             else
             {
-                ManageCCForm manageform = new ManageCCForm();
-                manageform.Tag = this;
-                manageform.Show();
-                this.Hide();
+                this.lbl_loginerror.Text = "Invalid Credentials!";
             }
+
+
+            //if (this.txt_username.Text == "A")
+            //{
+                
+            //}
+            //else
+            //{
+            //    ManageCCForm manageform = new ManageCCForm();
+            //    manageform.Tag = this;
+            //    manageform.Show();
+            //    this.Hide();
+            //}
         }
     }
 }

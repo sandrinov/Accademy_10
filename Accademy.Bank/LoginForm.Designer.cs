@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
+            this.lbl_loginerror = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_username
@@ -83,11 +84,23 @@
             this.txt_password.Size = new System.Drawing.Size(180, 30);
             this.txt_password.TabIndex = 3;
             // 
+            // lbl_loginerror
+            // 
+            this.lbl_loginerror.AutoSize = true;
+            this.lbl_loginerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_loginerror.ForeColor = System.Drawing.Color.Red;
+            this.lbl_loginerror.Location = new System.Drawing.Point(81, 254);
+            this.lbl_loginerror.Name = "lbl_loginerror";
+            this.lbl_loginerror.Size = new System.Drawing.Size(109, 39);
+            this.lbl_loginerror.TabIndex = 5;
+            this.lbl_loginerror.Text = "label3";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 272);
+            this.ClientSize = new System.Drawing.Size(437, 310);
+            this.Controls.Add(this.lbl_loginerror);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.label1);
@@ -107,6 +120,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Label lbl_loginerror;
     }
 }
 

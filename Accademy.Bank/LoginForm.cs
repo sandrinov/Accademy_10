@@ -1,4 +1,5 @@
 ﻿using Accademy.DataManager;
+using Accademy.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,8 @@ namespace Accademy.Bank
             {
                 if (datamanager.UserIsAnOwner(username))
                 {
-                    ManageCCForm manageform = new ManageCCForm();
+                    ContoCorrente cc = datamanager.GetContocorrenteByUsername(username);
+                    ManageCCForm manageform = new ManageCCForm(cc.GetNumeroConto());
                     manageform.Tag = this;
                     manageform.Show();
                     this.Hide();

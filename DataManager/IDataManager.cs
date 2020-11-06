@@ -13,5 +13,6 @@ namespace Accademy.DataManager
         bool LoginIsOK(string username, string password);
         bool UserIsAnOwner(string username);
         DataOperationResult CreateNewCliente(Cliente newCliente);
+        ContoCorrente GetContocorrenteByUsername(string username);
     }
 }

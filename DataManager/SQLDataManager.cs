@@ -16,6 +16,11 @@ namespace Accademy.DataManager
             throw new NotImplementedException();
         }
 
+        public ContoCorrente GetContocorrenteByUsername(string username)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool LoginIsOK(string username, string password)
         {
             throw new NotImplementedException();

@@ -66,7 +66,11 @@ namespace Accademy.Bank
             DataOperationResult result = datamanager.CreateNewCliente(newCliente);
             if (result.IsOK)
             {
-
+                
+                ManageCCForm manageform = new ManageCCForm(numconto);
+                manageform.Tag = this;
+                manageform.Show();
+                this.Hide();
             }
             else
             {

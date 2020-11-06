@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Accademy.DataManager;
+using Accademy.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,12 @@ namespace Accademy.Bank
 {
     public partial class OpenCCForm : Form
     {
+        private IDataManager datamanager;
         private string CurrentUser;
         public OpenCCForm(string username)
         {
             InitializeComponent();
+            datamanager = new FIleSystemDataManager();
             this.CurrentUser = username;
             this.label3.Text = CurrentUser;
             string numConto = Accademy.Helper.Helper.GetNumConto(20);
@@ -23,6 +27,7 @@ namespace Accademy.Bank
         }
         public OpenCCForm()
         {
+            datamanager = new FIleSystemDataManager();
             InitializeComponent();
         }
 
@@ -35,6 +40,29 @@ namespace Accademy.Bank
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_Conferma_Click(object sender, EventArgs e)
+        {
+            string username = this.label3.Text;
+            string numconto = this.label5.Text;
+            string nome = this.txt_Nome.Text;
+            string cognome = this.txt_Cognome.Text;
+            string cf = this.txt_CF.Text;
+
+            ContoCorrente newCC = new ContoCorrente(numconto);
+
+            Cliente newCliente = new Cliente()
+            {
+                Username = username,
+                FirstName = nome,
+                LastName = cognome,
+                CF = cf,
+                mioConto = newCC
+            };
+
+            datamanager.CreateNewCliente();
 
         }
     }

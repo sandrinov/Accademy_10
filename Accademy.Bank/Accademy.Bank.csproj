@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Accademy.Entities\Accademy.Entities.csproj">
+      <Project>{9BC4EB6F-A60C-42AA-92FF-F86AA0371EFC}</Project>
+      <Name>Accademy.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Accademy.Helper\Accademy.Helper.csproj">
       <Project>{bd55cb96-6391-4061-843b-88109e1c819a}</Project>
       <Name>Accademy.Helper</Name>

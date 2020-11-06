@@ -58,7 +58,7 @@
             // btn_close
             // 
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(876, 504);
+            this.btn_close.Location = new System.Drawing.Point(876, 490);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(123, 48);
             this.btn_close.TabIndex = 2;
@@ -117,6 +117,7 @@
             this.btn_Conferma.TabIndex = 7;
             this.btn_Conferma.Text = "Conferma";
             this.btn_Conferma.UseVisualStyleBackColor = true;
+            this.btn_Conferma.Click += new System.EventHandler(this.btn_Conferma_Click);
             // 
             // btn_Annulla
             // 

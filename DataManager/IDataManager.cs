@@ -10,5 +10,6 @@ namespace Accademy.DataManager
     {
         bool LoginIsOK(string username, string password);
         bool UserIsAnOwner(string username);
+        void CreateNewCliente();
     }
 }

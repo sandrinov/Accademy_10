@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManager", "DataManager\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Entities", "Accademy.Entities\Accademy.Entities.csproj", "{9BC4EB6F-A60C-42AA-92FF-F86AA0371EFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.TestDelegate", "Accademy.TestDelegate\Accademy.TestDelegate.csproj", "{0802869E-D8EA-4A46-961A-F5B267594806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.MailSystem", "Accademy.MailSystem\Accademy.MailSystem.csproj", "{E396122A-DA24-4471-99F0-EB82B0F948F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{9BC4EB6F-A60C-42AA-92FF-F86AA0371EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BC4EB6F-A60C-42AA-92FF-F86AA0371EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BC4EB6F-A60C-42AA-92FF-F86AA0371EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0802869E-D8EA-4A46-961A-F5B267594806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0802869E-D8EA-4A46-961A-F5B267594806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0802869E-D8EA-4A46-961A-F5B267594806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0802869E-D8EA-4A46-961A-F5B267594806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E396122A-DA24-4471-99F0-EB82B0F948F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E396122A-DA24-4471-99F0-EB82B0F948F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E396122A-DA24-4471-99F0-EB82B0F948F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E396122A-DA24-4471-99F0-EB82B0F948F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

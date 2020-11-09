@@ -38,7 +38,7 @@ namespace Accademy.MailSystem
             if (MailArrived != null)
             {
                 // Rise Event!!!!!!!!!!
-                foreach (var item in MailArrived.GetInvocationList().ToList())
+                foreach (var item in MailArrived.GetInvocationList())
                 {
                     MailManagerEventHandler mm_eh = (MailManagerEventHandler)item;
                     mm_eh(this, args);

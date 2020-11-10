@@ -42,5 +42,11 @@ namespace Accademy.TestDelegate
         {
 
         }
+
+        private void listBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.textBox1.Text = e.X.ToString();
+            this.textBox2.Text = e.Y.ToString();
+        }
     }
 }

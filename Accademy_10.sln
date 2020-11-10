@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.MailSystem", "Acca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.MultiNotifier", "Accademy.MultiNotifier\Accademy.MultiNotifier.csproj", "{0B052D74-6A73-437B-AE34-FBDC1DC3ED99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Lambda", "Accademy.Lambda\Accademy.Lambda.csproj", "{22FD9A2D-97A9-4349-97D7-772D7ACBC994}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{0B052D74-6A73-437B-AE34-FBDC1DC3ED99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B052D74-6A73-437B-AE34-FBDC1DC3ED99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B052D74-6A73-437B-AE34-FBDC1DC3ED99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

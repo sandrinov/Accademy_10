@@ -48,5 +48,10 @@ namespace Accademy.TestDelegate
             this.textBox1.Text = e.X.ToString();
             this.textBox2.Text = e.Y.ToString();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

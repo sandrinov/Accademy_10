@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.MultiNotifier", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.Lambda", "Accademy.Lambda\Accademy.Lambda.csproj", "{22FD9A2D-97A9-4349-97D7-772D7ACBC994}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.WebApp", "Accademy.WebApp\Accademy.WebApp.csproj", "{55A2DE98-E162-41BB-B962-AF00C3479FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accademy.DBTest", "Accademy.DBTest\Accademy.DBTest.csproj", "{9CB989AC-2EFD-4DEF-BAD9-0848435013D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +103,14 @@ Global
 		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22FD9A2D-97A9-4349-97D7-772D7ACBC994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A2DE98-E162-41BB-B962-AF00C3479FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A2DE98-E162-41BB-B962-AF00C3479FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A2DE98-E162-41BB-B962-AF00C3479FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A2DE98-E162-41BB-B962-AF00C3479FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB989AC-2EFD-4DEF-BAD9-0848435013D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB989AC-2EFD-4DEF-BAD9-0848435013D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB989AC-2EFD-4DEF-BAD9-0848435013D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB989AC-2EFD-4DEF-BAD9-0848435013D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

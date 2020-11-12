@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Accademy.Entities
 {
+    // POCO CLass  (Plain OLd C# Object) : 
+    // DTO Data Type Object
     public class Cliente
     {
         public String FirstName { get; set; }

@@ -11,6 +11,7 @@ namespace Accademy.DataManager
 {
     public class SQLDataManager : IDataManager
     {
+        private string connectionstring = "";
         public DataOperationResult CreateNewCliente(Cliente newCliente)
         {
             throw new NotImplementedException();

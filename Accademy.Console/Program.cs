@@ -17,6 +17,9 @@ namespace Accademy.Console
     {
         static void Main(string[] args)
         {
+            ///TestWebSite(args[0]);
+            TestRecursion();
+            //TestDictionary();
             //TestSplit();
             //TestReadFile();
             //TestHR();
@@ -32,11 +35,211 @@ namespace Accademy.Console
             //    throw;
             //}
 
-            //TestGeneric();
+           // TestGeneric();
 
             //TestUni_001();
             //TestUni_002();
-            Test_Tris();
+           // Test_Tris();
+        }
+
+        private static void TestRecursion()
+        {
+            // n! = n(n - 1)!
+            System.Console.WriteLine("Please Enter a Number");
+
+            //read number from user    
+            int number = Convert.ToInt32(System.Console.ReadLine());
+
+            //invoke the static method    
+            double factorial = Factorial_Iteration(number);
+
+            //print the factorial result    
+            System.Console.WriteLine("factorial of" + number + "=" + factorial.ToString());
+        }
+
+        public static double Factorial_Recursion(int number)
+        {
+            System.Console.WriteLine(number);
+            if (number == 0)
+                return 1;
+            return number * Factorial_Recursion(number - 1);  //Recursive call    
+        }
+
+
+        public static double Factorial_Iteration(int number)
+        {
+            if (number == 0)
+                return 1;
+
+            double factorial = 1;
+            for (int i = number; i >= 1; i--)
+            {
+                factorial = factorial * i;
+            }
+            return factorial;
+        }
+
+
+        private static void TestWebSite(string url)
+        {
+            // go to web site url
+            // print ok if found
+            // else print not found
+
+            System.Console.WriteLine(url);
+        }
+
+        private static void TestDictionary()
+        {
+            Dictionary<Guid, Persona> dic_persone = new Dictionary<Guid, Persona>();
+
+            dic_persone.Add(Guid.NewGuid(), new Persona());
+
+
+            Dictionary<string, string> openWith = new Dictionary<string, string>();
+
+            // Add some elements to the dictionary. There are no
+            // duplicate keys, but some of the values are duplicates.
+            openWith.Add("txt", "notepad.exe");
+            openWith.Add("bmp", "paint.exe");
+            openWith.Add("dib", "paint.exe");
+            openWith.Add("rtf", "wordpad.exe");
+
+            // The Add method throws an exception if the new key is
+            // already in the dictionary.
+            try
+            {
+                openWith.Add("txt", "winword.exe");
+            }
+            catch (ArgumentException)
+            {
+                System.Console.WriteLine("An element with Key = \"txt\" already exists.");
+            }
+
+            // The Item property is another name for the indexer, so you
+            // can omit its name when accessing elements.
+            System.Console.WriteLine("For key = \"rtf\", value = {0}.",
+                openWith["rtf"]);
+
+            // The indexer can be used to change the value associated
+            // with a key.
+            openWith["rtf"] = "winword.exe";
+            System.Console.WriteLine("For key = \"rtf\", value = {0}.",
+                openWith["rtf"]);
+
+            // If a key does not exist, setting the indexer for that key
+            // adds a new key/value pair.
+            openWith["doc"] = "winword.exe";
+
+            // The indexer throws an exception if the requested key is
+            // not in the dictionary.
+            try
+            {
+                System.Console.WriteLine("For key = \"tif\", value = {0}.",
+                    openWith["tif"]);
+            }
+            catch (KeyNotFoundException)
+            {
+                System.Console.WriteLine("Key = \"tif\" is not found.");
+            }
+
+            // When a program often has to try keys that turn out not to
+            // be in the dictionary, TryGetValue can be a more efficient
+            // way to retrieve values.
+            string value = "";
+            if (openWith.TryGetValue("tif", out value))
+            {
+                System.Console.WriteLine("For key = \"tif\", value = {0}.", value);
+            }
+            else
+            {
+                System.Console.WriteLine("Key = \"tif\" is not found.");
+            }
+
+            // ContainsKey can be used to test keys before inserting
+            // them.
+            if (!openWith.ContainsKey("ht"))
+            {
+                openWith.Add("ht", "hypertrm.exe");
+                System.Console.WriteLine("Value added for key = \"ht\": {0}",
+                    openWith["ht"]);
+            }
+
+            // When you use foreach to enumerate dictionary elements,
+            // the elements are retrieved as KeyValuePair objects.
+            System.Console.WriteLine();
+            foreach (KeyValuePair<string, string> kvp in openWith)
+            {
+                System.Console.WriteLine("Key = {0}, Value = {1}",
+                    kvp.Key, kvp.Value);
+            }
+
+            // To get the values alone, use the Values property.
+            Dictionary<string, string>.ValueCollection valueColl =
+                openWith.Values;
+
+            // The elements of the ValueCollection are strongly typed
+            // with the type that was specified for dictionary values.
+            System.Console.WriteLine();
+            foreach (string s in valueColl)
+            {
+                System.Console.WriteLine("Value = {0}", s);
+            }
+
+            // To get the keys alone, use the Keys property.
+            Dictionary<string, string>.KeyCollection keyColl =
+                openWith.Keys;
+
+            // The elements of the KeyCollection are strongly typed
+            // with the type that was specified for dictionary keys.
+            System.Console.WriteLine();
+            foreach (string s in keyColl)
+            {
+                System.Console.WriteLine("Key = {0}", s);
+            }
+
+            // Use the Remove method to remove a key/value pair.
+            System.Console.WriteLine("\nRemove(\"doc\")");
+            openWith.Remove("doc");
+
+            if (!openWith.ContainsKey("doc"))
+            {
+                System.Console.WriteLine("Key \"doc\" is not found.");
+            }
+
+            /* This code example produces the following output:
+
+            An element with Key = "txt" already exists.
+            For key = "rtf", value = wordpad.exe.
+            For key = "rtf", value = winword.exe.
+            Key = "tif" is not found.
+            Key = "tif" is not found.
+            Value added for key = "ht": hypertrm.exe
+
+            Key = txt, Value = notepad.exe
+            Key = bmp, Value = paint.exe
+            Key = dib, Value = paint.exe
+            Key = rtf, Value = winword.exe
+            Key = doc, Value = winword.exe
+            Key = ht, Value = hypertrm.exe
+
+            Value = notepad.exe
+            Value = paint.exe
+            Value = paint.exe
+            Value = winword.exe
+            Value = winword.exe
+            Value = hypertrm.exe
+
+            Key = txt
+            Key = bmp
+            Key = dib
+            Key = rtf
+            Key = doc
+            Key = ht
+
+            Remove("doc")
+            Key "doc" is not found.
+            */
         }
 
         private static void Test_Tris()
@@ -311,6 +514,9 @@ namespace Accademy.Console
 
         private static void TestGeneric()
         {
+
+            Dictionary<string, Persona> dict_str_person = new Dictionary<string, Persona>(); 
+
             List<int> lst_int = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
 
             if (lst_int.Contains(3))
@@ -320,6 +526,11 @@ namespace Accademy.Console
             Persona mario = new Persona("Mario", "Rossi");
             Persona maria = new Persona("Maria", "Bianchi");
             Persona gianni = new Persona("Gianni", "Giallo");
+
+            foreach (Persona item in lst_persona)
+            {
+
+            }
 
             lst_persona.Add(mario);
             lst_persona.Add(maria);

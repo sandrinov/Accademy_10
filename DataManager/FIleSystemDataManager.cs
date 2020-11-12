@@ -17,6 +17,9 @@ namespace Accademy.DataManager
         private string ccFileName;
         private string movimentiFileName;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public FIleSystemDataManager()
         {
             usersFileName = System.IO.Path.Combine(bankDir, "Users.txt");
@@ -24,13 +27,19 @@ namespace Accademy.DataManager
             ccFileName = System.IO.Path.Combine(bankDir, "ContiCorrenti.txt");
             movimentiFileName = System.IO.Path.Combine(bankDir, "Movimenti.txt");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="newCliente"></param>
+        /// <returns></returns>
         public DataOperationResult CreateNewCliente(Cliente newCliente)
         {
             DataOperationResult result = new DataOperationResult();
             // Write a row in Clienti.txt
             try
             {
+                //   comment .... https://stackoverflow.com/a/21795858
+
                 using (System.IO.StreamWriter sw_clienti = File.AppendText(clientiFileName))
                 {
                     

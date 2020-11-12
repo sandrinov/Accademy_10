@@ -8,6 +8,8 @@ namespace Accademy.Entities
 {
     public class ContoCorrente
     {
+        public int MyProperty { get; set; }
+
         private string numeroConto;
         private double saldo;
         private Cliente owner;

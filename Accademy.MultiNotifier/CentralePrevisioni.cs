@@ -18,7 +18,7 @@ namespace Accademy.MultiNotifier
 
         private void Notifier_TemperatureChanged(Notifier sender, WeatherEventArgs args)
         {
-            sender.ID
+            
         }
     }
 }
